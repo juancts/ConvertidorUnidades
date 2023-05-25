@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import styles from "./Converter.module.css";
-import { cm_pu, km_mi, pie_mt } from "../redux/actions";
+import { cm_pu, km_mi, pie_mt } from "../../redux/actions";
 
 function Converter() {
   const [selectedOption, setSelectedOption] = useState("");

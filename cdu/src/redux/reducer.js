@@ -8,13 +8,7 @@ import {
 } from "./actionTypes";
 
 const initialState = {
-  resultados: {},
-  kmmi: [],
-  mikm: [],
-  piemt: [],
-  mtpie: [],
-  cmpul: [],
-  pulcm: [],
+  resultados: [],
   nuevosresultados: [],
 };
 
@@ -25,48 +19,48 @@ const rootReducer = (state = initialState, { type, payload }) => {
       var millas = payload * 0.621371;
       return {
         ...state,
-        nuevosresultados: millas,
-        kmmi: millas,
+        nuevosresultados: [...state.nuevosresultados, millas],
+        
       };
     //MILLAS A KILOMETROS
     case Mi_KM:
       var kilometros = payload * 1.60934;
       return {
         ...state,
-        nuevosresultados: kilometros,
-        mikm: kilometros,
+        nuevosresultados: [...state.nuevosresultados, kilometros],
+        
       };
     //PIES A METROS
     case PIE_MT:
       var metros = payload * 0.3048;
       return {
         ...state,
-        nuevosresultados: metros,
-        piemt: metros,
+        nuevosresultados: [...state.nuevosresultados, metros],
+        
       };
     //METROS A PIES
     case MT_PIE:
       var pies = payload / 0.3048;
       return {
         ...state,
-        nuevosresultados: pies,
-        mtpie: pies,
+        nuevosresultados: [...state.nuevosresultados, pies],
+        
       };
     //CENTIMETROS A PULGADAS
     case CM_PUL:
       var pulgadas = payload / 2.54;
       return {
         ...state,
-        nuevosresultados: pulgadas,
-        cmpul: pulgadas,
+        nuevosresultados: [...state.nuevosresultados, pulgadas],
+        
       };
     //PULGADAS A CENTIMETROS
     case PUL_CM:
       var cm = payload * 2.54;
       return {
         ...state,
-        nuevosresultados: cm,
-        pulcm: cm,
+        nuevosresultados: [...state.nuevosresultados, cm],
+        
       };
 
     default:
