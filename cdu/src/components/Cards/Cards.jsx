@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 function Cards() {
 
-const datosguardados = useSelector((state)=>state.nuevosresultados);
+const datosguardados = useSelector((state)=>state.resultados);
 
   return (
     <div>

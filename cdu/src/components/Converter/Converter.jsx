@@ -46,6 +46,10 @@ function Converter() {
         <input type="number" placeholder="100" onChange={inputChange} />
         {selectedOption && <p>{selectedOption}</p>}
       </div>
+      <div>
+        <div>❤</div>
+        <div>{}</div>
+      </div>
     </div>
   );
 }

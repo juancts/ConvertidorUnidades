@@ -17,9 +17,16 @@ const rootReducer = (state = initialState, { type, payload }) => {
     //KILOMETROS A MILLAS
     case KM_Mi:
       var millas = payload * 0.621371;
+      const resultadosAnteriores = JSON.parse(localStorage.getItem('resultados')) || [];
+      const nuevosResultados = [...resultadosAnteriores, millas];
+      localStorage.setItem('resultados', JSON.stringify(nuevosResultados));
+      console.log("RESULTADOS ANTERIORES:", resultadosAnteriores)
+      console.log("RESULTADOS nuevos:", nuevosResultados)
+      console.log("LOCAL STORAGE", localStorage)
       return {
         ...state,
-        nuevosresultados: [...state.nuevosresultados, millas],
+        nuevosresultados: [millas],
+        resultados: nuevosResultados,
         
       };
     //MILLAS A KILOMETROS
