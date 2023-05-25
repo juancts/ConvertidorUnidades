@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./Converter.module.css";
 import { cm_pu, km_mi, pie_mt } from "../../redux/actions";
 
 function Converter() {
   const [selectedOption, setSelectedOption] = useState("");
   const [value, setValue] = useState("");
+  const ultimoresultado = useSelector((state)=>state.nuevosresultados)
 
   const dispatch = useDispatch();
 
@@ -46,9 +47,9 @@ function Converter() {
         <input type="number" placeholder="100" onChange={inputChange} />
         {selectedOption && <p>{selectedOption}</p>}
       </div>
-      <div>
+      <div className={styles.data2}>
         <div>❤</div>
-        <div>{}</div>
+        <div>{ultimoresultado}</div>
       </div>
     </div>
   );
