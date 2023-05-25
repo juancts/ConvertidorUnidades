@@ -20,9 +20,7 @@ const rootReducer = (state = initialState, { type, payload }) => {
       const resultadosAnteriores = JSON.parse(localStorage.getItem('resultados')) || [];
       const nuevosResultados = [...resultadosAnteriores, millas];
       localStorage.setItem('resultados', JSON.stringify(nuevosResultados));
-      console.log("RESULTADOS ANTERIORES:", resultadosAnteriores)
-      console.log("RESULTADOS nuevos:", nuevosResultados)
-      console.log("LOCAL STORAGE", localStorage)
+            
       return {
         ...state,
         nuevosresultados: [millas],
@@ -76,3 +74,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
 };
 
 export default rootReducer;
+
+
+// const resultadosAnteriores = JSON.parse(localStorage.getItem('resultados')) || [];
+//       const nuevosResultados = [...resultadosAnteriores, millas];
+//       localStorage.setItem('resultados', JSON.stringify(nuevosResultados));
+      
+//       console.log("RESULTADOS ANTERIORES:", resultadosAnteriores)
+//       console.log("RESULTADOS nuevos:", nuevosResultados)
+//       console.log("LOCAL STORAGE", localStorage)
