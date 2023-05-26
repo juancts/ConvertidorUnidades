@@ -1,0 +1,18 @@
+
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+.App > div1 {
+  justify-content: left;
+  border: solid red;
+}
