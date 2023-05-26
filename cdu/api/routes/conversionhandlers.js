@@ -1,4 +1,4 @@
-import Conversiondb from "../models/Conversiondb.js";
+import Converterdb from "../models/converterdb.js";
 
 
 
@@ -11,8 +11,9 @@ const POST_conversion = async (req, res) => {
   try {
     const { tipo, numero } = req.body;
 
-    const newConversion = new Conversiondb({ numero, tipo });
+    const newConversion = new Converterdb({ numero, tipo });
     await newConversion.save();
+    res.status(200).send("AGREGADO EXITOSAMENTE");
     console.log(newConversion);
   } catch (error) {
     console.log(error);

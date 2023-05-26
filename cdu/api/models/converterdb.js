@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const Conversiondb = new mongoose.Schema({
+const converterdb = new mongoose.Schema({
     numero: {
         type: String,
         required: true, 
@@ -13,4 +13,4 @@ const Conversiondb = new mongoose.Schema({
     }
 })
 
-export default mongoose.model('Conversiondb', Conversiondb)
+export default mongoose.model('converterdb', converterdb)
