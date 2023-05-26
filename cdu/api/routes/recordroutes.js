@@ -1,7 +1,17 @@
-//import React from 'react'
+import { Router } from "express";
 
-function recordroutes() {
-  
-}
+import{
+    GET_conversions,
+    POST_conversion
 
-export default recordroutes
+} from "./conversionhandlers.js"
+
+
+
+const router = Router();
+
+router.get("/", GET_conversions);
+router.post("/post", POST_conversion);
+
+
+export default router;
