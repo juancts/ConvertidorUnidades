@@ -1,9 +1,12 @@
 import React from 'react'
 import styles from "./Card.module.css"
-function Card(props) {
+function Card({numero}) {
+
+console.log("NUMERO DE CARD:", numero)
+
   return (
     <div className={styles.container}>
-        <p key={props.key} >{props.datosguardados}</p>
+        <p>{numero}</p>
         <button>x</button>
         
         

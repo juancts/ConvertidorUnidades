@@ -49,7 +49,7 @@ function Converter() {
       </div>
       <div className={styles.data2}>
         <div>❤</div>
-        <div>{ultimoresultado}</div>
+        <div></div>
       </div>
     </div>
   );
